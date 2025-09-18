@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Email Button</title>
+  <style>
+    .email-button {
+      padding: 10px 20px;
+      font-size: 16px;
+      color: white;
+      background-color: #4CAF50;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    .email-button:hover {
+      background-color: #45a049;
+    }
+  </style>
+</head>
+<body>
+  <h1>Contact Us</h1>
+  <p>If you have any questions or need assistance, feel free to reach out to us.</p>
+
+  <!-- Email button -->
+  <button class="email-button" onclick="sendEmail()">Send Email</button>
+
+  <script>
+    function sendEmail() {
+      const email = "your-email@example.com"; // Replace with your email
+      const subject = "Inquiry from Website"; // Replace with your subject
+      const body = "Hello, I have a question about..."; // Replace with your default email body
+
+      // Opens the user's default email client
+      window.location.href = `mailto:${email}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+    }
+  </script>
+</body>
+</html>
